@@ -17,3 +17,4 @@ def test_root_returns_service_metadata(client: TestClient) -> None:
     body = response.json()
     assert body["service"] == "miroha-api"
     assert "version" in body
+    assert "environment" in body
